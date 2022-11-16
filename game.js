@@ -42,9 +42,6 @@ function nextSequence() {
         // play the sound 
         playSound(randomChosenColor);
     }, 300)
-
-
-
 }
 
 // detect when any of the buttons is clicked, play the sound and animate the click
@@ -57,8 +54,6 @@ $(".btn").click(function (event) {
     if (gamePattern.length > 0) {
         checkAnswer(userClickedPattern.length - 1);
     }
-
-
 })
 
 // play the sound - eval() turns a string into a variable 
@@ -77,7 +72,7 @@ function animatePress(currentColor) {
 }
 
 
-// function that check the correct sequence - currentLevel is a current index 
+// function that checks the correct sequence - currentLevel is a current index 
 function checkAnswer(currentLevel) {
     // check whether the element at index X in userClickedPattern is the same as element as index X in gamePattern
     if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
@@ -106,25 +101,6 @@ function startOver() {
     level = 0;
 }
 
-// // all of this has to be done in a loop 
-// while (userClickedPattern.length > 0) {
-//     console.log("step 1")
-//     //  check if the user answer is correct, 
-//     for (let counter = 0; counter < gamePattern.length; counter++) {
-//         console.log("the game is going on");
-//         console.log(gamePattern)
-//         if (!userClickedPattern[counter] === gamePattern[counter]) {
-//             // game over start again 
-//             console.log("Oopsies");
-//             isGameOn = false;
-//             gamePattern = [];
-//             $("#level-title").text("New Game?");
-//         }
-//     }
 
-//     // if yes, launch another nextSequence and empty userClickedPattern
-//     userClickedPattern = [];
-//     // add delay 
-//     nextSequence();
-
-// }
+// ADD THE RECORD COUNTER 
+// PLAY WITH CSS AND DESIGN IN GENERAL 
